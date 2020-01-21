@@ -16,15 +16,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        fetchService()
     }
     
     // Endpoint: http://www.mocky.io/v2/5e2674472f00002800a4f417
     // 1. Crear expeción de seguridad - Ok
     // 2. Crear URL con el endpoint. - OK
-    // 3. Hacer request con la ayuda de URLSession
-    // 4. Transformar respuesta a diccionario
-    // 5. Ejecutar Request
+    // 3. Hacer request con la ayuda de URLSession - OK
+    // 4. Transformar respuesta a diccionario - OK
+    // 5. Ejecutar Request - OK
     private func fetchService() {
         let endpointString = "http://www.mocky.io/v2/5e2674472f00002800a4f417"
         
@@ -32,7 +33,17 @@ class ViewController: UIViewController {
             return
         }
         
+        // Iniciamos el Loader
+        activityIndicator.startAnimating()
+        
         URLSession.shared.dataTask(with: endpoint) { (data: Data?, _, error: Error?) in
+            
+            // Detener el loader
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+            }
+            
+            
             if error != nil {
                 print("Hubo un error!")
                 
@@ -45,8 +56,16 @@ class ViewController: UIViewController {
                 return
             }
             
-            self.nameLabel.text = dictionary["user"] as? String
-        }
+            // Importante: TODOS los llamados a la UI, se hacen en el main thread (pregunta de entrevista)
+            DispatchQueue.main.async {
+                let isHappy = dictionary["isHappy"] as? Bool ?? false
+                
+                self.nameLabel.text = dictionary["user"] as? String
+                self.statusLabel.text = isHappy ? "Es feliz!" : "Es triste!"
+            }
+            
+            
+        }.resume()
     }
 }
 
