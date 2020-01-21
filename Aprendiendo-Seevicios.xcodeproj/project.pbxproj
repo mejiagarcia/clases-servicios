@@ -13,9 +13,12 @@
 		2C6CD51123D73F8C00F2A50F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6CD50F23D73F8C00F2A50F /* Main.storyboard */; };
 		2C6CD51323D73F8C00F2A50F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6CD51223D73F8C00F2A50F /* Assets.xcassets */; };
 		2C6CD51623D73F8C00F2A50F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6CD51423D73F8C00F2A50F /* LaunchScreen.storyboard */; };
+		6BF7FC0E6BDFE69B3C632677 /* Pods_Aprendiendo_Seevicios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D043FCD57FB1233939D3235 /* Pods_Aprendiendo_Seevicios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F965F8C0994015733FED029 /* Pods-Aprendiendo-Seevicios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aprendiendo-Seevicios.release.xcconfig"; path = "Target Support Files/Pods-Aprendiendo-Seevicios/Pods-Aprendiendo-Seevicios.release.xcconfig"; sourceTree = "<group>"; };
+		1D043FCD57FB1233939D3235 /* Pods_Aprendiendo_Seevicios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aprendiendo_Seevicios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6CD50623D73F8C00F2A50F /* Aprendiendo-Seevicios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aprendiendo-Seevicios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6CD50923D73F8C00F2A50F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C6CD50B23D73F8C00F2A50F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		2C6CD51223D73F8C00F2A50F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C6CD51523D73F8C00F2A50F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C6CD51723D73F8C00F2A50F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1521A3987E392109A1C0F3F /* Pods-Aprendiendo-Seevicios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aprendiendo-Seevicios.debug.xcconfig"; path = "Target Support Files/Pods-Aprendiendo-Seevicios/Pods-Aprendiendo-Seevicios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BF7FC0E6BDFE69B3C632677 /* Pods_Aprendiendo_Seevicios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				2C6CD50823D73F8C00F2A50F /* Aprendiendo-Seevicios */,
 				2C6CD50723D73F8C00F2A50F /* Products */,
+				63E4F67B0A3B93A99DB4CFAB /* Pods */,
+				4F897569D7E6B3AE08C1C695 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "Aprendiendo-Seevicios";
 			sourceTree = "<group>";
 		};
+		4F897569D7E6B3AE08C1C695 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D043FCD57FB1233939D3235 /* Pods_Aprendiendo_Seevicios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63E4F67B0A3B93A99DB4CFAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1521A3987E392109A1C0F3F /* Pods-Aprendiendo-Seevicios.debug.xcconfig */,
+				0F965F8C0994015733FED029 /* Pods-Aprendiendo-Seevicios.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C6CD51A23D73F8C00F2A50F /* Build configuration list for PBXNativeTarget "Aprendiendo-Seevicios" */;
 			buildPhases = (
+				63A38BFAB8E1D9E7B81FD242 /* [CP] Check Pods Manifest.lock */,
 				2C6CD50223D73F8C00F2A50F /* Sources */,
 				2C6CD50323D73F8C00F2A50F /* Frameworks */,
 				2C6CD50423D73F8C00F2A50F /* Resources */,
+				C16126DD3A6EFD84D9BBF5B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63A38BFAB8E1D9E7B81FD242 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aprendiendo-Seevicios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C16126DD3A6EFD84D9BBF5B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aprendiendo-Seevicios/Pods-Aprendiendo-Seevicios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aprendiendo-Seevicios/Pods-Aprendiendo-Seevicios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aprendiendo-Seevicios/Pods-Aprendiendo-Seevicios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C6CD50223D73F8C00F2A50F /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		2C6CD51B23D73F8C00F2A50F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1521A3987E392109A1C0F3F /* Pods-Aprendiendo-Seevicios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		2C6CD51C23D73F8C00F2A50F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F965F8C0994015733FED029 /* Pods-Aprendiendo-Seevicios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
